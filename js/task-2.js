@@ -1,30 +1,12 @@
 'use strict';
 function formatMessage(message, maxLength) {
 
-
-    const message = message.length >= maxLength ? `${message.slice(0, maxLength)} "..."` : message;
-
-    // if (message.length > maxLength) {
-
-    //     `${message.slice(0, maxLength)} "..."`;
-
-    //     console.log(message.length,);
-
-    //     console.log(message.slice(0, maxLength));
-    //     console.log( `${message.slice(0, maxLength)} "..."`);
-
-    // } else {
-
-
-
-    // }
-
-
-    return
-     }
-    // return realLength = message.length <= maxLength.length ? `${message.slace(0, maxLength)} "..."` : message;
-
-
+    if (message.length <= maxLength) {
+        return message;
+    }
+    else {
+        return `${message.slice(0,maxLength+1)} ...`};
+    }
 
 
 console.log(formatMessage("Curabitur ligula sapien", 16)); //"Curabitur ligula..."
