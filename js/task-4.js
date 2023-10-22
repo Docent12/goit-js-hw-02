@@ -1,3 +1,5 @@
+//Зі списку видно, що доставка можлива не скрізь. Якщо зазначена країна відсутня у списку,
+// то функція повинна повернути рядок "Sorry, there is no delivery to your country".
 "use strict";
 
 function getShippingCost(country) {

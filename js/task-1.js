@@ -1,7 +1,11 @@
-'use strict';
+// якщо сума до сплати перевищує кількість кредитів на рахунку клієнта, функція має повертати рядок "Insufficient funds!"
+//в іншому випадку функція має повертати рядок "You ordered <quantity> drods worth <totalPrice> credits!",
+//де < quantity > це кількість замовлених дроїдів, а < totalPrice > це їх загальна вартість.
+
+"use strict";
 function makeTransaction(quantity, pricePerDroid, customerCredits) {
-    let totalPrice = quantity * pricePerDroid;
-    if (totalPrice > customerCredits) {
+    let totalPrice = quantity * pricePerDroid;  // рахуем загальну суму замовленя
+    if (totalPrice > customerCredits) {    //  перевіряем умову
         return "Insufficient funds!";
     } else {
         return `You ordered ${quantity} droids worth ${totalPrice} credits!`;
